@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 //submit data - this will have to be an array with all the data from the 10 inputs
-function Input () {    
-        return (
+function Input () { 
+             return (
             <button className="inputDataSubmit">
                 Submit
             </button>
@@ -10,8 +10,8 @@ function Input () {
 }
 
 //collect data
-function UserInfo () {    
-    return (
+function UserInfo (props) {   
+     return (
              <div className="userData">
                 <form className="userDataForm">
                     <input></input>
