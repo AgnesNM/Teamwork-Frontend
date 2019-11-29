@@ -1,51 +1,51 @@
-import { React } from "react";
+import * as React from 'react';
 
 //submit data - this will have to be an array with all the data from the 10 inputs
-class Input extends React.Component {
-    render() {
+function Input () {    
         return (
             <button className="inputDataSubmit">
-                {this.props.value}
+                Submit
             </button>
         );
-    }
 }
 
 //collect data
-class UserInfo extends React.Component {
-    renderInput(i){
-        return <Input value={i} />;
-    }
-    render () {
-        return (
-            <div className="userData">
+function UserInfo () {    
+    return (
+             <div className="userData">
                 <form className="userDataForm">
-                    {this.renderInput(0)}
-                    {this.renderInput(1)}
-                    {this.renderInput(2)}
-                    {this.renderInput(3)}
-                    {this.renderInput(4)}
-                    {this.renderInput(5)}
-                    {this.renderInput(6)}
-                    {this.renderInput(7)}
-                    {this.renderInput(8)}
-                    {this.renderInput(9)}
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
                 </form>
+                <Input></Input>
             </div>
         );
-    }
 }
 
+
 //display data
-class EmployeeUserAccount extends React.Component {
-    render(){
-        return (
-            <div className = "success">
-                <div><UserInfo /></div>
-            </div>
-            
-        );
-    }
+function EmployeeUserAccount () {
+        return(
+            <div className="display">                                
+            <UserInfo></UserInfo>
+            <a
+            className="App-link"
+            href="https://ndutateamwork.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Create Employee User Account
+          </a>
+        </div>
+        )
 }
 
 export default EmployeeUserAccount;
